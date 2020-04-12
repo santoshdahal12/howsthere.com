@@ -3,6 +3,9 @@ import { graphql } from 'gatsby';
 import Img from "gatsby-image"
 import Layout from '../components/layout';
 import SEO from "../components/seo"
+import { DiscussionEmbed } from "disqus-react"
+
+
 
 const Template = ({ data }) => {
     const { markdownRemark } = data
@@ -11,6 +14,10 @@ const Template = ({ data }) => {
     const readingTimeText = markdownRemark.fields.readingTime.text;
     const featuredImgFluid = featuredImage.childImageSharp.fluid;
 
+    const disqusConfig = {
+        shortname: process.env.GATSBY_DISQUS_NAME,
+        config: { identifier: frontmatter.path, title },
+      }
     return (
         <Layout>
             <SEO 
@@ -31,6 +38,7 @@ const Template = ({ data }) => {
             <p className="featured-image-runner" dangerouslySetInnerHTML={{ __html: featuredImgSrc }} />
             </div>
         <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
+        <DiscussionEmbed {...disqusConfig} />
         </Layout >
     )
 }
@@ -42,6 +50,7 @@ export const query = graphql`
                 html
                 excerpt(pruneLength: 200)
                 frontmatter {
+                    path
                     title
                     date(formatString: "MMMM Do, YYYY")
                     featuredImage {
