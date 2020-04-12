@@ -29,8 +29,6 @@ const Layout = ({ children, type }) => {
       }
     }
   `)
-
-  console.log("checking type", type);
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />

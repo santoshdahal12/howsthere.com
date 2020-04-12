@@ -10,16 +10,18 @@ const IndexPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout type={Layout.Type.MAIN_PAGE}>
-      <SEO title="Home" />
+      <SEO title="Software blog" />
       <div style={{
-        // maxWidth: `100`,
         marginBottom: `2rem`, display: 'block',
         marginLeft: 'auto',
         marginRight: 'auto',
-        // width:"20%"
+        textAlign: "justify"
       }}>
-        {/* <ProfileImage /> */}
-        Welcome to the how'sthere blog. This blog is open for any suggestion. I will use this blog to post whatever I learn in my daily life. The post can be related to technologies. However, in near future I am going to restructure and rewrite this blog so that anyone can post their stories here. 
+        <p>
+          Hi !! I am santosh dahal.
+          I mantain this blog writing about software things I have learnt and like in software development.
+          Hope you will enjoy this.
+        </p>
       </div>
       {
         edges.map(

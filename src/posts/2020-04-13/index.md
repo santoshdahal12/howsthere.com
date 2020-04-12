@@ -6,7 +6,8 @@ featuredImage: trail-starts-here.jpg
 featuredImgAlt: "Second step in staircase"
 featuredImgSrc: |
     Photo by <a href="https://www.freeimages.com/photographer/kristajo-40637">Krista Johanson</a> from <a href="https://freeimages.com">FreeImages</a>
-tags: ['Rust', 'WASM', 'Web Assembly']
+keyWords: ['Rust', 'WASM', 'Web Assembly']
+tags: ['Software']
 excerpt: "Another blog post for testing."
 ---
 
