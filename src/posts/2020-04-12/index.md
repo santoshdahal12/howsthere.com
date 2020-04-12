@@ -1,7 +1,7 @@
 ---
 path: "/first-post"
 date: "2020-04-13"
-title: "How did I built this website?"
+title: "How did I build this website?"
 featuredImage: children.jpg
 featuredImgAlt: Children playing in river with joy
 featuredImgSrc: |
