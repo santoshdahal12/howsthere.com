@@ -19,7 +19,7 @@ const IndexPage = ({ data }) => {
       }}>
         <p>
           Hi !! I am santosh dahal.
-          I mantain this blog writing about software things I have learnt and like in software development.
+          I mantain this blog writing about software development.
           Hope you will enjoy this.
         </p>
       </div>
