@@ -6,7 +6,7 @@ featuredImage: trail-starts-here.jpg
 featuredImgAlt: "Second step in staircase"
 featuredImgSrc: |
     Photo by <a href="https://www.freeimages.com/photographer/kristajo-40637">Krista Johanson</a> from <a href="https://freeimages.com">FreeImages</a>
-keyWords: ['Gatsby' 'React', 'Frontend']
+keyWords: ['Gatsby', 'React', 'Frontend']
 tags: ['Software', 'Node']
 excerpt: "Thought of adding one page to this blog, had to upgrade entire dependencies."
 ---
