@@ -1,7 +1,7 @@
 ---
 path: "/updating-to-latest-versions"
 date: "2023-12-14"
-title: "gatsby version upgrade for this website??"
+title: "Gatsby Version Upgrade for this Website??"
 featuredImage: trail-starts-here.jpg
 featuredImgAlt: "Second step in staircase"
 featuredImgSrc: |
