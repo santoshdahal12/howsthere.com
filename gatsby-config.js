@@ -113,10 +113,10 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        plugins: [`gatsby-remark-reading-time`],
         name: `posts`,
         path: `${__dirname}/src/posts`,
       },

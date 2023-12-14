@@ -1,6 +1,6 @@
 import React, { Fragment } from "react"
 import { Link, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => {
         textAlign: "justify"
       }}>
         <p>
-         Hi!! I am santosh dahal. Welcome to this world. I write about software and technology. Please feel free to give feedback and add comments to the posts.
+         Hi!! I am Santosh Dahal. Welcome to this world. I write about software and technology. Please feel free to give feedback and add comments to the posts.
         </p>
       </div>
       {
@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => {
           edge => {
             const { frontmatter, timeToRead } = edge.node;
             const { featuredImgAlt, featuredImage, featuredImgSrc, excerpt } = frontmatter;
-            const featuredImgFluid = featuredImage.childImageSharp.fluid;
+            const featuredImgFluid = featuredImage.childImageSharp.gatsbyImageData;
             return (
               <div
                 key={frontmatter.path} className="card">
@@ -37,7 +37,7 @@ const IndexPage = ({ data }) => {
                   <div className="blog-runner">
                     <small>{frontmatter.date}&nbsp;.&nbsp;{timeToRead} min read</small>
                   </div>
-                  <Img fluid={featuredImgFluid} alt={featuredImgAlt} />
+                  <GatsbyImage image={featuredImgFluid} alt={featuredImgAlt} />
                   <p className="featured-image-runner" dangerouslySetInnerHTML={{ __html: featuredImgSrc }} />
                   <div style={{
                     display: 'flex',
@@ -56,7 +56,7 @@ const IndexPage = ({ data }) => {
 
                 </Fragment>
               </div>
-            )
+            );
           }
         )
       }
@@ -64,9 +64,8 @@ const IndexPage = ({ data }) => {
   );
 }
 
-export const query = graphql`
-query MyQuery {
-  allMarkdownRemark(sort:{order:DESC,fields:[frontmatter___date]}) {
+export const query = graphql`query MyQuery {
+  allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}) {
     edges {
       node {
         timeToRead
@@ -78,18 +77,15 @@ query MyQuery {
           tags
           featuredImage {
             childImageSharp {
-              fluid(maxWidth: 400) {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData(width: 400, layout: CONSTRAINED)
             }
-        }
-        featuredImgAlt
-        featuredImgSrc
+          }
+          featuredImgAlt
+          featuredImgSrc
         }
       }
     }
   }
-}
-`
+}`
 
 export default IndexPage
