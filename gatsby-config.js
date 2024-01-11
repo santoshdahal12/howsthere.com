@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `how's there`,
+    title: `Santosh Blogs`,
     description: `Blogging for structuring thoughts on life and technology.`,
-    author: `santoshdahal2072@gmail.com`,
+    author: `https://www.linkedin.com/in/santosh-dahal/`,
     keyWords:['Technology', 'Software','Santosh Dahal', 'Blog'],
-    siteUrl:`https://www.howsthere.com`
+    siteUrl:`https://sdahal.netlify.app/`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
