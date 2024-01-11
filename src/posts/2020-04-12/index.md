@@ -14,10 +14,10 @@ excerpt: "Gatsby, GarphQL and NetliFy makes building a static website easy and f
 Sometimes we feel like to build our own blogs. There are many fancy blogging platforms already available. Choosing one of them might be a great and easy idea for someone who is not in software development field. But, hey, being a developer, don't we always feel great building our own things, play with it, customize it, deploy it in our ease. If u feel the same, lets start doing it.
 
 #### What tools/services I used to build this webiste?
-- **[GoDaddy](https://www.godaddy.com/)** : Its a popular domain registration platform. *www.howsthere.com* is registered there.
 - **[Gatsby](https://www.gatsbyjs.org/)** : I built and deploy this website with $0 cost other than the domain name purchase. I built this website using Gatsby. It is a free and open source framework based on [React](https://reactjs.org/) that helps developers like us to build websites amazingly fast. It has many plugin availables that lets you build sites with the data you want — from one or many sources: Pull data from headless CMSs, SaaS services, APIs, databases, your file system, and more directly into your pages using [GraphQL](https://graphql.org/). 
 - **[Netlify](https://www.netlify.com/)** : Later I deployed this website making it publicly available using [Netlify](https://www.netlify.com/). Netlify's free tier service gives following which is sufficient for any blogger.
     - free for  one team member
+    - free website URL under nelify.app domain. Just provide site name and netlify attaches netlify.app to it. This is free . You can also register custom domain going to domain management section of Netlify
     - continuous deployment upto 300 build minutes/month. 
     - simple integration with any version control like Bitbucket, GitHub etc.
     - free HTTPS on all sites, including automatic certificate creation and renewal. Why HTTPS is essential is separate topic of discussion but other than security reasons, we definitely want HTTPS as Google prioritize sites with HTTPS enabled in its search result. 
