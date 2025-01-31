@@ -49,7 +49,7 @@ const IndexPage = ({ data }) => {
                     </div>
                     <div>
                       <Link to={frontmatter.path} >
-                        Readmore...
+                        Read more
                       </Link>
                     </div>
 

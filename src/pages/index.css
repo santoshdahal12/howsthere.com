@@ -1,86 +1,256 @@
-a.subnav_link:link {
-    text-decoration: none; 
+/* Base link and card styles from our previous update */
+a.subnav_link {
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
 }
 
 a {
-    color: #0645ad; 
+    color: #2563eb;
     text-decoration: none;
-}
-a:hover{
-    color: red; 
-    text-decoration: underline;
+    transition: all 0.2s ease-in-out;
 }
 
-.card{
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    padding:1rem;
-    display: 'flex';
-    flex-direction:column;
-    align-items: 'flex-start';
-    margin: 1rem 0;
-    text-decoration: none;
-    background-color: #FFFFFF
-}
-.card:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+a:hover {
+    color: #dc2626;
 }
 
-p{
-    text-align: justify;
-    text-justify: inter-word;
-}
-.gatsby-highlight-code-line {
-    background-color: hsla(0,0%,0%,0.04);
-    display: block;
-    margin-right: -1em;
-    margin-left: -1em;
-    padding-right: 1em;
-    padding-left: 0.75em;
-    border-left: 0.25em solid #f99;
+/* Card styles */
+.card {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
 }
 
-/**
- * Add back the container background-color, border-radius, padding, margin
- * and overflow that we removed from <pre>.
- */
- .gatsby-highlight {
-    background-color: hsla(0,0%,0%,0.04);
-    border-radius: 0.3em;
-    margin: 0.5em 0;
-    padding: 1em;
+.card:hover {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    transform: translateY(-4px);
+}
+
+/* Card title and content styling */
+.card h2 {
+    margin-bottom: 0;
+    transition: color 0.3s ease;
+}
+
+.card:hover h2 {
+    color: #dc2626;
+}
+
+/* Blog metadata and read more styling */
+.blog-runner {
+    margin: 0.5rem 0 1rem 0;
+    color: #6b7280;
+}
+
+.card > div:last-child > div:last-child a {
+    display: inline-flex;
+    align-items: center;
+    color: #2563eb;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.card > div:last-child > div:last-child a:hover {
+    color: #dc2626;
+    transform: translateX(4px);
+}
+
+/* Code highlighting improvements */
+.gatsby-highlight {
+    background-color: #1f2937;
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+    padding: 1.5rem;
     overflow: auto;
-  }
+    position: relative;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
 
-/**
- * Remove the default PrismJS theme background-color, border-radius, margin,
- * padding and overflow.
- * 1. Make the element just wide enough to fit its content.
- * 2. Always fill the visible space in .gatsby-highlight.
- * 3. Adjust the position of the line numbers
- */
- .gatsby-highlight pre[class*="language-"] {
+/* Add language label */
+.gatsby-highlight::before {
+    content: attr(data-language);
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    color: #9ca3af;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: #374151;
+    padding: 0.25rem 0.75rem;
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.gatsby-highlight-code-line {
+    background-color: #374151;
+    display: block;
+    margin-right: -1.5rem;
+    margin-left: -1.5rem;
+    padding: 0.25rem 1.5rem;
+    border-left: 0.25rem solid #dc2626;
+}
+
+/* Code block styling */
+.gatsby-highlight pre[class*="language-"] {
     background-color: transparent;
     margin: 0;
-    padding: 0;
+    padding: 1rem 0;
     overflow: initial;
-    float: left; /* 1 */
-    min-width: 100%; /* 2 */
+    float: left;
+    min-width: 100%;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
 }
 
-/**
- * If you already use line highlighting
- */
-
-/* Adjust the position of the line numbers */
 .gatsby-highlight pre[class*="language-"].line-numbers {
-    padding-left: 2.8em;
-  }
-  
-  .gatsby-highlight pre[class*="language-"].line-numbers {
-    padding: 0;
-    padding-left: 2.8em;
-    overflow: initial;
+    padding-left: 3.5rem;
 }
 
+/* Token coloring */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #9ca3af;
+    font-style: italic;
+}
 
+.token.function {
+    color: #60a5fa;
+}
+
+.token.keyword {
+    color: #f472b6;
+}
+
+.token.string {
+    color: #34d399;
+}
+
+.token.number {
+    color: #fbbf24;
+}
+
+.token.operator {
+    color: #e879f9;
+}
+
+.token.class-name {
+    color: #93c5fd;
+}
+
+/* Inline code styling */
+:not(pre) > code[class*="language-"] {
+    background: #f3f4f6;
+    color: #dc2626;
+    padding: 0.2em 0.4em;
+    border-radius: 0.25rem;
+    white-space: normal;
+    font-size: 0.875em;
+}
+
+/* Scrollbar styling for code blocks */
+.gatsby-highlight::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+
+.gatsby-highlight::-webkit-scrollbar-track {
+    background: #374151;
+    border-radius: 0.5rem;
+}
+
+.gatsby-highlight::-webkit-scrollbar-thumb {
+    background: #4b5563;
+    border-radius: 0.5rem;
+}
+
+.gatsby-highlight::-webkit-scrollbar-thumb:hover {
+    background: #6b7280;
+}
+
+/* Line number styling */
+.line-numbers-rows {
+    border-right: 1px solid #4b5563 !important;
+    padding-right: 1rem;
+}
+
+.line-numbers-rows > span:before {
+    color: #9ca3af !important;
+}
+
+/* Header styling */
+h1, h2, h3, h4, h5, h6 {
+    color: #111827;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 2rem 0 1rem;
+}
+
+h1 {
+    font-size: 2.25rem;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.875rem;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 0.25rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+/* Typography and content styling */
+p {
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.8;
+    color: #374151;
+    margin-bottom: 1.5rem;
+}
+
+blockquote {
+    border-left: 4px solid #2563eb;
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    background-color: #f3f4f6;
+    border-radius: 0.25rem;
+}
+
+blockquote p {
+    margin: 0;
+    color: #4b5563;
+    font-style: italic;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+}
+
+th, td {
+    padding: 0.75rem;
+    border: 1px solid #e5e7eb;
+}
+
+th {
+    background-color: #f3f4f6;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #f9fafb;
+}
