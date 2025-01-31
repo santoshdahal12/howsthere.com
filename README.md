@@ -1,6 +1,6 @@
 # santoshdahal.com
 
-This is public repository for [santoshdahal.com](https://www.santoshdahal.com.com). This is built with [gatsby](https://www.gatsbyjs.org/) powered by React and GraphQL. The build and deployment is managed by [Netfly](https://www.netlify.com/)
+This is public repository for [santoshdahal.com](https://www.santoshdahal.com). This is built with [gatsby](https://www.gatsbyjs.org/) powered by React and GraphQL. The build and deployment is managed by [Netfly](https://www.netlify.com/)
 
 # Publish articles
 
