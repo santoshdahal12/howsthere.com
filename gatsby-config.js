@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `how's there`,
-    description: `Blogging for structuring thoughts on life and technology.`,
-    author: `santoshdahal2072@gmail.com`,
+    title: `santosh dahal`,
+    description: `Blogging things on technology.`,
+    author: `mail@santoshdahal.com`,
     keyWords:['Technology', 'Software','Santosh Dahal', 'Blog'],
-    siteUrl:`https://www.howsthere.com`
+    siteUrl:`https://www.santoshdahal.com`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

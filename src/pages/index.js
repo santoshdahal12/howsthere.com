@@ -18,7 +18,8 @@ const IndexPage = ({ data }) => {
         textAlign: "justify"
       }}>
         <p>
-         Hi!! I am Santosh Dahal. Welcome to this world. I write about software and technology. Please feel free to give feedback and add comments to the posts.
+         Hi !! You have landed here finally, welcome !! Hopefully there is something nice here you can read.
+         I wish I could get time to write more .
         </p>
       </div>
       {
